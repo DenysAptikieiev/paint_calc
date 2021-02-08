@@ -38,6 +38,9 @@ let dispersion = document.querySelector('.dispersion'),
             calcFunction(value, coaliscent, 0.00085714);
             valueText.textContent = `Для ${kilogram.value}kg краски подребуется:`;
             kilogram.value = '';
+        } else if(value > 140) {  
+            kilogram.value = '';
+            kilogram.placeholder = 'максимально количество 140кг'
         } else {
             kilogram.value = '';
             kilogram.placeholder = 'введите число'
