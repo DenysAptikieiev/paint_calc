@@ -1,0 +1,62 @@
+.wrapper {
+  margin: 0 auto;
+  min-width: 300px;
+  max-width: 500px;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.header #quantity {
+  min-width: 260px;
+  max-width: 300px;
+  height: 25px;
+  border-radius: 5px;
+  border: 1px solid;
+  margin-bottom: 20px;
+}
+.header .btn {
+  width: 265px;
+  height: 30px;
+  background: green;
+  color: #fff;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+table {
+  table-layout: fixed;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th:nth-child(1) {
+  width: 40%;
+}
+
+th:nth-child(2) {
+  width: 20%;
+}
+
+th:nth-child(3) {
+  width: 20%;
+}
+
+th, td {
+  padding: 20px;
+  border: 1px solid;
+}
+
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,19 @@
+{
+  "name": "color-calc",
+  "version": "1.0.0",
+  "description": "my calc paint",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DenysAptikieiev/paint_calc.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DenysAptikieiev/paint_calc/issues"
+  },
+  "homepage": "https://github.com/DenysAptikieiev/paint_calc#readme"
+}
