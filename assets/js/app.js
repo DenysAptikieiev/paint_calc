@@ -28,7 +28,8 @@ let dispersion = document.querySelector('.dispersion'),
     btnCalculate.addEventListener('click', () => {
         const value = +kilogram.value;
 
-        if(!isNaN(value) && value !== '' && value <= 140) {
+        if(!isNaN(value) && value !== ' ' && value <= 140 && value !== 0) {
+            console.log(value);
             calcFunction(value, dispersion, 0.15);
             calcFunction(value, pigment, 0.17857143);
             calcFunction(value, filler, 0.3);
