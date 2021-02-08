@@ -9,6 +9,7 @@ let dispersion = document.querySelector('.dispersion'),
     preservative = document.querySelector('.preservative'),
     thickener = document.querySelector('.thickener'),
     defoamer = document.querySelector('.defoamer'),
+    valueText = document.querySelector('.value-text'),
     coaliscent = document.querySelector('.coaliscent');
 
     const calcFunction = (value, elem, quantity) => {
@@ -27,7 +28,7 @@ let dispersion = document.querySelector('.dispersion'),
     btnCalculate.addEventListener('click', () => {
         const value = +kilogram.value;
 
-        if(!isNaN(value) && value !== '' && value < 140) {
+        if(!isNaN(value) && value !== '' && value <= 140) {
             calcFunction(value, dispersion, 0.15);
             calcFunction(value, pigment, 0.17857143);
             calcFunction(value, filler, 0.3);
@@ -35,7 +36,10 @@ let dispersion = document.querySelector('.dispersion'),
             calcFunction(value, thickener, 0.00285714);
             calcFunction(value, defoamer, 0.00014286);
             calcFunction(value, coaliscent, 0.00085714);
+            valueText.textContent = `Для ${kilogram.value}kg краски подребуется:`;
+            kilogram.value = '';
         } else {
-            kilogram.value = 'введите число'
+            kilogram.value = '';
+            kilogram.placeholder = 'введите число'
         }
     });
