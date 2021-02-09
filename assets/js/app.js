@@ -4,14 +4,18 @@ const kilogram = document.querySelector('#quantity'),
     btnCalculateFasad = document.querySelector('.btnF'),
     btnCalculateInter = document.querySelector('.btnInter');
 
-let dispersion = document.querySelector('.dispersion'),
-    pigment = document.querySelector('.pigment'),
-    filler = document.querySelector('.filler'),
-    preservative = document.querySelector('.preservative'),
-    thickener = document.querySelector('.thickener'),
-    defoamer = document.querySelector('.defoamer'),
-    valueText = document.querySelector('.value-text'),
-    coaliscent = document.querySelector('.coaliscent');
+let valueText = document.querySelector('.value-text');
+
+
+const rawMaterials = {
+    dispersion: { fasad: 0.25, inter: 0.085 },
+    pigment: { fasad: 0.17857143, inter: 0.1 },
+    filler: { fasad: 0.3, inter: 0.425 },
+    preservative: { fasad: 0.00014286, inter: 0.00014286 },
+    thickener: { fasad: 0.00285714, inter: 0.00285714 },
+    defoamer: { fasad: 0.00014286, inter: 0.00014286 },
+    coaliscent: { fasad: 0.00085714, inter: 0.00085714 }
+}
 
 const calcFunction = (elem, quantity) => {
     const value = +kilogram.value;
@@ -39,25 +43,19 @@ const calcFunction = (elem, quantity) => {
 }
 
 btnCalculateFasad.addEventListener('click', () => {
-        calcFunction(dispersion, 0.25);
-        calcFunction(pigment, 0.17857143);
-        calcFunction(filler, 0.3);
-        calcFunction(preservative, 0.00014286);
-        calcFunction(thickener, 0.00285714);
-        calcFunction(defoamer, 0.00014286);
-        calcFunction(coaliscent, 0.00085714);
-        valueText.textContent = `Для ${kilogram.value}kg фасадной краски подребуется:`;
-        kilogram.value = '';
+    for (let key in rawMaterials) {
+        let elem = document.querySelector(`.${key}`);
+        calcFunction(elem, rawMaterials[key].fasad);
+    }
+    valueText.textContent = `Для ${kilogram.value}kg фасадной краски подребуется:`;
+    kilogram.value = '';
 });
 
 btnCalculateInter.addEventListener('click', () => {
-        calcFunction(dispersion, 0.085);
-        calcFunction(pigment, 0.1);
-        calcFunction(filler, 0.425);
-        calcFunction(preservative, 0.00014286);
-        calcFunction(thickener, 0.00285714);
-        calcFunction(defoamer, 0.00014286);
-        calcFunction(coaliscent, 0.00085714);
-        valueText.textContent = `Для ${kilogram.value}kg интеръерной краски подребуется:`;
-        kilogram.value = '';
+    for (let key in rawMaterials) {
+        let elem = document.querySelector(`.${key}`);
+        calcFunction(elem, rawMaterials[key].inter);
+    }
+    valueText.textContent = `Для ${kilogram.value}kg интеръерной краски подребуется:`;
+    kilogram.value = '';
 });
