@@ -27,8 +27,18 @@
   border: 1px solid;
   margin-bottom: 20px;
 }
-.header button {
-  width: 265px;
+
+.btn-block {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+.btn-block button {
+  max-width: 265px;
+  min-width: 165px;
   height: 30px;
   background: green;
   color: #fff;
@@ -39,24 +49,28 @@
 table {
   table-layout: fixed;
   border-collapse: collapse;
-  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-th:nth-child(1) {
-  width: 40%;
-}
-
-th:nth-child(2) {
-  width: 20%;
-}
-
-th:nth-child(3) {
-  width: 20%;
-}
-
-th, td {
+td {
   padding: 20px;
   border: 1px solid;
+}
+
+@media (min-width: 320px) and (max-width: 620px) {
+  td {
+    padding: 10px;
+    border: 1px solid;
+  }
+
+  .btn-block button {
+    width: 300px;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
