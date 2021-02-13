@@ -11,7 +11,7 @@ const rawMaterials = {
     filler: { fasad: 0.3, interior: 0.425 },                   //  Кальцит
     preservative: { fasad: 0.00014286, interior: 0.00014286 }, //  Консервант
     thickener: { fasad: 0.00143, interior: 0.00285714 },    //  Загуститель
-    defoamer: { fasad: 0.00014286, interior: 0.00014286 },     //  Пеногаситель
+    defoamer: { fasad: 0.00028572, interior: 0.00014286 },     //  Пеногаситель
     coaliscent: { fasad: 0.00085714, interior: 0.00085714 }    //  Коалисцент
 }
 
