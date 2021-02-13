@@ -6,11 +6,11 @@ const kilogram = document.querySelector('#quantity'),
     valueText = document.querySelector('.value-text');
 
 const rawMaterials = {
-    dispersion: { fasad: 0.25, interior: 0.085 },              //  Дисперсия
-    pigment: { fasad: 0.17857143, interior: 0.1 },             //  Диоксид Титана
+    dispersion: { fasad: 0.15, interior: 0.085 },              //  Дисперсия
+    pigment: { fasad: 0.145, interior: 0.1 },             //  Диоксид Титана
     filler: { fasad: 0.3, interior: 0.425 },                   //  Кальцит
     preservative: { fasad: 0.00014286, interior: 0.00014286 }, //  Консервант
-    thickener: { fasad: 0.00285714, interior: 0.00285714 },    //  Загуститель
+    thickener: { fasad: 0.00143, interior: 0.00285714 },    //  Загуститель
     defoamer: { fasad: 0.00014286, interior: 0.00014286 },     //  Пеногаситель
     coaliscent: { fasad: 0.00085714, interior: 0.00085714 }    //  Коалисцент
 }
