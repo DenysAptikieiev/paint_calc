@@ -19,7 +19,7 @@ const rawMaterials = {
 }
 
 const calcFunction = (type, price) => {
-    const value = +kilogram.value;
+    const value = +kilogram.value.replace(/,/, '.');
     kilogram.value = '';
     let totalPrice = 0;
     let totalWeight = 0; 
