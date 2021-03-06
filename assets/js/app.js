@@ -15,6 +15,7 @@ const rawMaterials = {
     thickener: { fasad: 0.00143, interior: 0.00285714, price: 48 },      //  Загуститель
     defoamer: { fasad: 0.00028572, interior: 0.00014286, price: 25 },       //  Пеногаситель
     coaliscent: { fasad: 0.00085714, interior: 0.00085714, price: 90 },
+    dispersant: {fasad: 0.00156568, interior: 0.00085714, price: 90}, //диспергатор
     water: {fasad: 0.40228571, interior: 0.386, price: 0.013584}     //  Коалисцент
 }
 
