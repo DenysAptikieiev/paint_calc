@@ -8,16 +8,16 @@ const kilogram = document.querySelector('#quantity'),
     valueText = document.querySelector('.value-text');
 
 const rawMaterials = {
-    dispersion: { fasad: 0.15, interior: 0.085, price: 48 },                //  Дисперсия
-    pigment: { fasad: 0.145, interior: 0.1, price: 80 },               //  Диоксид Титана
-    filler: { fasad: 0.3, interior: 0.425, price: 5.6 },                    //  Кальцит
-    preservative: { fasad: 0.00014286, interior: 0.00014286, price: 25.35 },//  Консервант
-    thickener: { fasad: 0.00143, interior: 0.00285714, price: 48 },      //  Загуститель
+    dispersion: { fasad: 0.15, interior: 0.085, price: 75 },                //  Дисперсия
+    pigment: { fasad: 0.145, interior: 0.1, price: 100 },               //  Диоксид Титана
+    filler: { fasad: 0.3, interior: 0.425, price: 5},                    //  Кальцит
+    preservative: { fasad: 0.00014286, interior: 0.00014286, price: 88.32},//  Консервант
+    thickener: { fasad: 0.00143, interior: 0.00285714, price: 284},      //  Загуститель
     //defoamer: { fasad: 0.00028572, interior: 0.00014286, price: 25 },       //  Пеногаситель
-    defoamer: { fasad: 0.006, interior: 0.00014286, price: 25 },       //  Пеногаситель
-    coaliscent: { fasad: 0.00085714, interior: 0.00085714, price: 90 },
-    dispersant: {fasad: 0.00156568, interior: 0.00085714, price: 90}, //диспергатор
-    water: {fasad: 0.40228571, interior: 0.386, price: 0.013584}     //  Коалисцент
+    defoamer: { fasad: 0.006, interior: 0.00014286, price: 128},       //  Пеногаситель
+    coaliscent: { fasad: 0.00085714, interior: 0.00085714, price: 106.65}, // Коалисцент
+    dispersant: {fasad: 0.00156568, interior: 0.00085714, price: 122}, //диспергатор
+    water: {fasad: 0.40228571, interior: 0.386, price: 0.013584}     
 }
 
 const calcFunction = (type, price) => {
