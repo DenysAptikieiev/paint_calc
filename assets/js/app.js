@@ -5,6 +5,7 @@ const kilogram = document.querySelector('#quantity'),
     btnCalculateInter = document.querySelector('.btnInter'),
     elemTotalPrice = document.querySelector('.total-price'),
     water = document.querySelector('.water td:nth-child(3)'),
+    forOne = document.querySelector('.forOne'),
     valueText = document.querySelector('.value-text');
 
 const rawMaterials = {
@@ -60,6 +61,8 @@ const calcFunction = (type, price) => {
     totalWeight
     totalPrice = totalPrice.toFixed(2);
     elemTotalPrice.textContent = `${totalPrice}UAH`;
+    const forOnePrice = (totalPrice / value * 14).toFixed(2);
+    forOne.textContent = `${forOnePrice}UAH`;
     // water.textContent = `${(value - totalWeight).toFixed(2)}kg`;
 }
 
