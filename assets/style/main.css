@@ -1,8 +1,7 @@
 .wrapper {
   margin: 0 auto;
   min-width: 300px;
-  max-width: 500px;
-}
+  max-width: 500px; }
 
 .header {
   display: -webkit-box;
@@ -17,16 +16,30 @@
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
-          flex-direction: column;
-}
-.header #quantity {
+          flex-direction: column; }
+
+#quantity {
   min-width: 260px;
   max-width: 300px;
   height: 25px;
   border-radius: 5px;
   border: 1px solid;
-  margin-bottom: 20px;
-}
+  margin-bottom: 20px; }
+
+.input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
 
 .btn-block {
   width: 100%;
@@ -34,17 +47,15 @@
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: distribute;
-      justify-content: space-around;
-}
-.btn-block button {
-  max-width: 265px;
-  min-width: 165px;
-  height: 30px;
-  background: green;
-  color: #fff;
-  border-radius: 5px;
-  margin-bottom: 20px;
-}
+      justify-content: space-around; }
+  .btn-block button {
+    max-width: 265px;
+    min-width: 165px;
+    height: 30px;
+    background: green;
+    color: #fff;
+    border-radius: 5px;
+    margin-bottom: 20px; }
 
 table {
   table-layout: fixed;
@@ -54,27 +65,29 @@ table {
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
-          justify-content: center;
-}
+          justify-content: center; }
 
 td {
-  padding: 8px;
-  border: 1px solid;
-}
+  padding: 15px;
+  border: 1px solid; }
 
 tr:first-child {
-  background: #f5f2f0;
-}
+  background: #f5f2f0; }
 
 @media (min-width: 320px) and (max-width: 620px) {
   td {
     padding: 5px 0;
-    border: 1px solid;
-  }
+    border: 1px solid; }
 
   .btn-block button {
-    width: 300px;
-  }
-}
+    width: 300px; } }
+@media (min-width: 1100px) {
+  .wrapper {
+    max-width: 1300px; }
 
-/*# sourceMappingURL=main.css.map */
+  .main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around; } }

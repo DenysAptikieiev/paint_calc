@@ -25,6 +25,7 @@ const calcFunction = (type, price) => {
     kilogram.value = '';
     let totalPrice = 0;
     let totalWeight = 0; 
+    const maxQuantity = 1000
 
     for (let key in rawMaterials) {
 
@@ -33,7 +34,7 @@ const calcFunction = (type, price) => {
         let quantity = rawMaterials[key][type];
         let priceOfElem = rawMaterials[key][price];
 
-        if (!isNaN(value) && value !== ' ' && value <= 140 && value !== 0) {
+        if (!isNaN(value) && value !== ' ' && value <= maxQuantity && value !== 0) {
             valueText.textContent = `Для ${value}kg (${type}) краски подребуется:`;
 
             let resultG = value * quantity * 1000;
@@ -51,7 +52,7 @@ const calcFunction = (type, price) => {
             elemOfPrice.textContent = `${resultEqualsPrice}UAH`
 
         } else if (value > 140) {
-            kilogram.placeholder = 'максимально количество 140кг'
+            kilogram.placeholder = `максимально количество ${maxQuantity}кг`
         } else {
             kilogram.placeholder = 'введите число'
         }
@@ -64,3 +65,8 @@ const calcFunction = (type, price) => {
 
 btnCalculateFasad.addEventListener('click', () => calcFunction('fasad', 'price'));
 btnCalculateInter.addEventListener('click', () => calcFunction('interior', 'price'));
+document.addEventListener('keydown', e => {
+    if(e.code == 'Enter') {
+        calcFunction('fasad', 'price')
+    }
+})
