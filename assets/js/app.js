@@ -10,7 +10,7 @@ const kilogram = document.querySelector('#quantity'),
 
 const rawMaterials = {
     dispersion: { fasad: 0.15, interior: 0.085, price: 75 },                //  Дисперсия
-    pigment: { fasad: 0.145, interior: 0.1, price: 100 },               //  Диоксид Титана
+    pigment: { fasad: 0.145, interior: 0.1, price: 200 },               //  Диоксид Титана
     filler: { fasad: 0.3, interior: 0.425, price: 5},                    //  Кальцит
     preservative: { fasad: 0.00014286, interior: 0.00014286, price: 88.32},//  Консервант
     thickener: { fasad: 0.00143, interior: 0.00285714, price: 284},      //  Загуститель
